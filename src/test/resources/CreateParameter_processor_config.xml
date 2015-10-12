@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
+							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							   xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
+							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
+	<rg:create-parameter id="create-param-1" name="toTest1" source="context:location">
+		<rg:processor>
+			<rgcct:test-value-processor/>
+		</rg:processor>
+	</rg:create-parameter>
+</rg:regurgitator-configuration>

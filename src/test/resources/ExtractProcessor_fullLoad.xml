@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
+							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd">
+	<rg:create-parameter name="name" value="this">
+		<rg:processor>
+			<rg:extract-processor format="this is {0} test" index="0"/>
+		</rg:processor>
+	</rg:create-parameter>
+</rg:regurgitator-configuration>

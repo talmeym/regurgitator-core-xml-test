@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
+							   xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
+							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
+	<rg:build-parameter id="build-param-1" name="toTest1">
+		<rg:builder>
+			<rgcct:test-builder/>
+		</rg:builder>
+		<rg:processor/>
+	</rg:build-parameter>
+</rg:regurgitator-configuration>
