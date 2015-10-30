@@ -3,8 +3,6 @@
 							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd">
 	<rg:generate-parameter name="name">
-		<rg:generator>
-			<rg:number-generator max="1234"/>
-		</rg:generator>
+		<rg:number-generator max="1234"/>
 	</rg:generate-parameter>
 </rg:regurgitator-configuration>

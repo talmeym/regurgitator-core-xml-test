@@ -3,8 +3,6 @@
 							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd">
 	<rg:create-parameter name="name" value="this">
-	    <rg:processor>
-			<rg:substitute-processor token="this" replacement="that"/>
-		</rg:processor>
+		<rg:substitute-processor token="this" replacement="that"/>
 	</rg:create-parameter>
 </rg:regurgitator-configuration>

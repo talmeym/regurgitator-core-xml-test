@@ -3,7 +3,7 @@
 							   xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
 							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
-	<rg:create-response id="create-response-1" value="value">
+	<rg:build-parameter id="build-param-2" name="something:toTest2" type="NUMBER" merge="LEAVE" builder="test-value-builder">
 		<rgcct:test-value-processor/>
-	</rg:create-response>
+	</rg:build-parameter>
 </rg:regurgitator-configuration>

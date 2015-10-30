@@ -4,11 +4,7 @@
 							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
 	<rg:build-parameter id="build-param-2" name="something:toTest2" type="OTHER" merge="LEAVE">
-		<rg:builder>
-			<rgcct:test-value-builder/>
-		</rg:builder>
-		<rg:processor>
-			<rgcct:test-value-processor-2/>
-		</rg:processor>
+		<rgcct:test-value-builder/>
+		<rgcct:test-value-processor-2/>
 	</rg:build-parameter>
 </rg:regurgitator-configuration>

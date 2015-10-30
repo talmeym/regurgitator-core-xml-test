@@ -4,8 +4,6 @@
 							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
 	<rg:generate-parameter id="build-param-1" name="toTest1">
-		<rg:generator>
-			<rgcct:test-value-generator-2/>
-		</rg:generator>
+		<rgcct:test-value-generator-2/>
 	</rg:generate-parameter>
 </rg:regurgitator-configuration>

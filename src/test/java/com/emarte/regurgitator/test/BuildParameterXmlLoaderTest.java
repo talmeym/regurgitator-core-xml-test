@@ -17,6 +17,11 @@ public class BuildParameterXmlLoaderTest extends XmlBaseTest {
 	}
 
 	@Test
+	public void testMinimumFlatXml() throws Exception {
+		assertExpectation(getElement("classpath:/BuildParameter_min_flat.xml"), "com.emarte.regurgitator.core.BuildParameter:['build-param-1',com.emarte.regurgitator.core.ParameterPrototype:['toTest1',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],null]");
+	}
+
+	@Test
 	public void testMaximumXml() throws Exception {
 		assertExpectation(getElement("classpath:/BuildParameter_max.xml"), "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
 	}
@@ -24,6 +29,16 @@ public class BuildParameterXmlLoaderTest extends XmlBaseTest {
 	@Test
 	public void testMaximumFlatXml() throws Exception {
 		assertExpectation(getElement("classpath:/BuildParameter_max_flat.xml"), "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+	}
+
+	@Test
+	public void testMaximumHalfFlatBuilderXml() throws Exception {
+		assertExpectation(getElement("classpath:/BuildParameter_max_half_flat_builder.xml"), "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+	}
+
+	@Test
+	public void testMaximumHalfFlatProcessorXml() throws Exception {
+		assertExpectation(getElement("classpath:/BuildParameter_max_half_flat_processor.xml"), "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
 	}
 
 	@Test
@@ -40,19 +55,9 @@ public class BuildParameterXmlLoaderTest extends XmlBaseTest {
 		toTest.load(getElement("classpath:/BuildParameter_missingBuilder.xml"), new HashSet<Object>());
 	}
 
-	@Test(expected = DocumentException.class)
-	public void testInvalidXmlEmptyBuilder() throws Exception {
-		getElement("classpath:/BuildParameter_emptyBuilder.xml");
-	}
-
 	@Test(expected = RegurgitatorException.class)
 	public void testInvalidXmlMissingBuilderClass() throws Exception {
 		toTest.load(getElement("classpath:/BuildParameter_missingBuilderClass.xml"), new HashSet<Object>());
-	}
-
-	@Test(expected = DocumentException.class)
-	public void testInvalidXmlEmptyProcessor() throws Exception {
-		getElement("classpath:/BuildParameter_emptyProcessor.xml");
 	}
 
 	@Test(expected = RegurgitatorException.class)

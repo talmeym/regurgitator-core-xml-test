@@ -4,8 +4,6 @@
 							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
 	<rg:generate-parameter id="generate-parameter-1" name="context:name" merge="LEAVE" type="NUMBER" generator="test-value-generator">
-		<rg:processor>
-			<rgcct:test-value-processor-2/>
-		</rg:processor>
+		<rgcct:test-value-processor-2/>
 	</rg:generate-parameter>
 </rg:regurgitator-configuration>

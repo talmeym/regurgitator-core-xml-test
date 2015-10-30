@@ -27,6 +27,16 @@ public class GenerateParameterXmlLoaderTest extends XmlBaseTest {
 	}
 
 	@Test
+	public void testMaximumHalfFlatGeneratorXml() throws Exception {
+		assertExpectation(getElement("classpath:/GenerateParameter_max_half_flat_generator.xml"), "com.emarte.regurgitator.core.GenerateParameter:['generate-parameter-1',com.emarte.regurgitator.core.ParameterPrototype:['name',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'context',com.emarte.regurgitator.test.stuff.TestValueGenerator:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+	}
+
+	@Test
+	public void testMaximumHalfFlatProcessorXml() throws Exception {
+		assertExpectation(getElement("classpath:/GenerateParameter_max_half_flat_processor.xml"), "com.emarte.regurgitator.core.GenerateParameter:['generate-parameter-1',com.emarte.regurgitator.core.ParameterPrototype:['name',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'context',com.emarte.regurgitator.test.stuff.TestValueGenerator:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+	}
+
+	@Test
 	public void testFullLoadXml() throws Exception {
 		ConfigurationFile.loadFile("classpath:/GenerateParameter_max.xml");
 	}
@@ -38,21 +48,6 @@ public class GenerateParameterXmlLoaderTest extends XmlBaseTest {
 	@Test(expected = RegurgitatorException.class)
 	public void testInvalidXmlMissingGenerator() throws Exception {
 		toTest.load(getElement("classpath:/GenerateParameter_missingGenerator.xml"), new HashSet<Object>());
-	}
-
-	@Test(expected = DocumentException.class)
-	public void testInvalidXmlEmptyGenerator() throws Exception {
-		getElement("classpath:/GenerateParameter_emptyGenerator.xml");
-	}
-
-	@Test(expected = DocumentException.class)
-	public void testInvalidXmlEmptyProcessor() throws Exception {
-		getElement("classpath:/GenerateParameter_emptyProcessor.xml");
-	}
-
-	@Test(expected = RegurgitatorException.class)
-	public void testInvalidXmlMissingValidatorClass() throws Exception {
-		toTest.load(getElement("classpath:/GenerateParameter_missingProcessorClass.xml"), new HashSet<Object>());
 	}
 
 	@Test(expected = RegurgitatorException.class)
