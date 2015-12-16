@@ -13,7 +13,7 @@ public class SequenceRefXmlLoaderTest extends XmlBaseTest {
 
 	@Test
 	public void testMinimumXml() throws Exception {
-		assertExpectation(getElement("classpath:/SequenceRef_min.xml"), "com.emarte.regurgitator.core.Sequence:['regurgitator-configuration-1',[com.emarte.regurgitator.core.CreateParameter:['create-param-1',com.emarte.regurgitator.core.ParameterPrototype:['toTest1',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.core.ContextLocation:['context:location'],null,null]]]");
+		assertExpectation(getElement("classpath:/SequenceRef_min.xml"), "com.emarte.regurgitator.core.Sequence:['regurgitator-configuration-1',[com.emarte.regurgitator.core.CreateParameter:['create-param-1',com.emarte.regurgitator.core.ParameterPrototype:['toTest1',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null],null]]]");
 	}
 
 	@Test

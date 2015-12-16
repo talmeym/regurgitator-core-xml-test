@@ -13,17 +13,17 @@ public class IndexOfProcessorXmlLoaderTest extends XmlBaseTest {
 
 	@Test
 	public void testSource() throws Exception {
-		assertExpectation(getElement("classpath:/IndexOfProcessor_source.xml"), "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null,false]");
+		assertExpectation(getElement("classpath:/IndexOfProcessor_source.xml"), "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null],false]");
 	}
 
 	@Test
 	public void testValue() throws Exception {
-		assertExpectation(getElement("classpath:/IndexOfProcessor_value.xml"), "com.emarte.regurgitator.core.IndexOfProcessor:[null,'value',false]");
+		assertExpectation(getElement("classpath:/IndexOfProcessor_value.xml"), "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[null,'value'],false]");
 	}
 
 	@Test
 	public void testSourceAndValue() throws Exception {
-		assertExpectation(getElement("classpath:/IndexOfProcessor_sourceAndValue.xml"), "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value',false]");
+		assertExpectation(getElement("classpath:/IndexOfProcessor_sourceAndValue.xml"), "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value'],false]");
 	}
 
 	private void assertExpectation(Element element, String expected) throws RegurgitatorException {
