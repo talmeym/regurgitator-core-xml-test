@@ -18,7 +18,7 @@ public class BuildParameterXmlLoaderTest extends XmlBaseTest {
 
 	@Test
 	public void testMinimumFlatXml() throws Exception {
-		assertExpectation(getElement("classpath:/BuildParameter_min_flat.xml"), "com.emarte.regurgitator.core.BuildParameter:['build-param-1',com.emarte.regurgitator.core.ParameterPrototype:['toTest1',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],null]");
+		assertExpectation(getElement("classpath:/BuildParameter_minFlat.xml"), "com.emarte.regurgitator.core.BuildParameter:['build-param-1',com.emarte.regurgitator.core.ParameterPrototype:['toTest1',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],null]");
 	}
 
 	@Test
@@ -33,12 +33,12 @@ public class BuildParameterXmlLoaderTest extends XmlBaseTest {
 
 	@Test
 	public void testMaximumHalfFlatBuilderXml() throws Exception {
-		assertExpectation(getElement("classpath:/BuildParameter_max_half_flat_builder.xml"), "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+		assertExpectation(getElement("classpath:/BuildParameter_maxHalfFlatBuilder.xml"), "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
 	}
 
 	@Test
 	public void testMaximumHalfFlatProcessorXml() throws Exception {
-		assertExpectation(getElement("classpath:/BuildParameter_max_half_flat_processor.xml"), "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+		assertExpectation(getElement("classpath:/BuildParameter_maxHalfFlatProcessor.xml"), "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
 	}
 
 	@Test

@@ -28,12 +28,12 @@ public class GenerateParameterXmlLoaderTest extends XmlBaseTest {
 
 	@Test
 	public void testMaximumHalfFlatGeneratorXml() throws Exception {
-		assertExpectation(getElement("classpath:/GenerateParameter_max_half_flat_generator.xml"), "com.emarte.regurgitator.core.GenerateParameter:['generate-parameter-1',com.emarte.regurgitator.core.ParameterPrototype:['name',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'context',com.emarte.regurgitator.test.stuff.TestValueGenerator:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+		assertExpectation(getElement("classpath:/GenerateParameter_maxHalfFlatGenerator.xml"), "com.emarte.regurgitator.core.GenerateParameter:['generate-parameter-1',com.emarte.regurgitator.core.ParameterPrototype:['name',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'context',com.emarte.regurgitator.test.stuff.TestValueGenerator:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
 	}
 
 	@Test
 	public void testMaximumHalfFlatProcessorXml() throws Exception {
-		assertExpectation(getElement("classpath:/GenerateParameter_max_half_flat_processor.xml"), "com.emarte.regurgitator.core.GenerateParameter:['generate-parameter-1',com.emarte.regurgitator.core.ParameterPrototype:['name',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'context',com.emarte.regurgitator.test.stuff.TestValueGenerator:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+		assertExpectation(getElement("classpath:/GenerateParameter_maxHalfFlatProcessor.xml"), "com.emarte.regurgitator.core.GenerateParameter:['generate-parameter-1',com.emarte.regurgitator.core.ParameterPrototype:['name',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'context',com.emarte.regurgitator.test.stuff.TestValueGenerator:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
 	}
 
 	@Test
