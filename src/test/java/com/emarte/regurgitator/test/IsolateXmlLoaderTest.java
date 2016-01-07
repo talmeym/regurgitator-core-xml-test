@@ -13,12 +13,17 @@ public class IsolateXmlLoaderTest extends XmlBaseTest {
 
 	@Test
 	public void testMin() throws Exception {
-		assertExpectation(getElement("classpath:/Isolate_min.xml"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],false]");
+		assertExpectation(getElement("classpath:/Isolate_min.xml"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],false,false]");
 	}
 
 	@Test
-	public void testMax() throws Exception {
-		assertExpectation(getElement("classpath:/Isolate_max.xml"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],true]");
+	public void testSession() throws Exception {
+		assertExpectation(getElement("classpath:/Isolate_session.xml"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],true,false]");
+	}
+
+	@Test
+	public void testParameters() throws Exception {
+		assertExpectation(getElement("classpath:/Isolate_parameters.xml"), "com.emarte.regurgitator.core.Isolate:['isolate-1',com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'],false,true]");
 	}
 
 	private void assertExpectation(Element element, String expected) throws RegurgitatorException {
