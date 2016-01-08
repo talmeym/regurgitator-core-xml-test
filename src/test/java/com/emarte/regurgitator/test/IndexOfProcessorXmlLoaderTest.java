@@ -1,32 +1,25 @@
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.*;
-import org.dom4j.Element;
+import com.emarte.regurgitator.core.IndexOfProcessorXmlLoader;
 import org.junit.Test;
 
-import java.util.HashSet;
-
-import static junit.framework.Assert.assertEquals;
-
-public class IndexOfProcessorXmlLoaderTest extends XmlBaseTest {
-	private static final IndexOfProcessorXmlLoader toTest = new IndexOfProcessorXmlLoader();
+public class IndexOfProcessorXmlLoaderTest extends XmlLoaderTest {
+	public IndexOfProcessorXmlLoaderTest() {
+		super(new IndexOfProcessorXmlLoader());
+	}
 
 	@Test
 	public void testSource() throws Exception {
-		assertExpectation(getElement("classpath:/IndexOfProcessor_source.xml"), "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null],false]");
+		assertExpectation("classpath:/IndexOfProcessor_source.xml", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null],false]");
 	}
 
 	@Test
 	public void testValue() throws Exception {
-		assertExpectation(getElement("classpath:/IndexOfProcessor_value.xml"), "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[null,'value'],false]");
+		assertExpectation("classpath:/IndexOfProcessor_value.xml", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[null,'value'],false]");
 	}
 
 	@Test
 	public void testSourceAndValue() throws Exception {
-		assertExpectation(getElement("classpath:/IndexOfProcessor_sourceAndValue.xml"), "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value'],false]");
-	}
-
-	private void assertExpectation(Element element, String expected) throws RegurgitatorException {
-		assertEquals(expected, toTest.load(element, new HashSet<Object>()).toString());
+		assertExpectation("classpath:/IndexOfProcessor_sourceAndValue.xml", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value'],false]");
 	}
 }

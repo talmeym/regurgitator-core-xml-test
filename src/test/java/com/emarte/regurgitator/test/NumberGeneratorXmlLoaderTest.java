@@ -1,29 +1,26 @@
 package com.emarte.regurgitator.test;
 
 import com.emarte.regurgitator.core.*;
-import org.dom4j.*;
+import org.dom4j.DocumentException;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
 import java.io.IOException;
-import java.util.HashSet;
 
-import static junit.framework.Assert.assertEquals;
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
 
-public class NumberGeneratorXmlLoaderTest extends XmlBaseTest {
-	private NumberGeneratorXmlLoader toTest = new NumberGeneratorXmlLoader();
+public class NumberGeneratorXmlLoaderTest extends XmlLoaderTest {
+	public NumberGeneratorXmlLoaderTest() {
+		super(new NumberGeneratorXmlLoader());
+	}
 
 	@Test
 	public void testThis() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		assertExpectation(getElement("classpath:/numberGenerator.xml"), "com.emarte.regurgitator.core.NumberGenerator:[1234]");
+		assertExpectation("classpath:/numberGenerator.xml", "com.emarte.regurgitator.core.NumberGenerator:[1234]");
 	}
 
 	@Test
 	public void testFullLoad() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		ConfigurationFile.loadFile("classpath:/numberGenerator_fullLoad.xml");
-	}
-
-	private void assertExpectation(Element element, String expected) throws RegurgitatorException {
-		assertEquals(expected, toTest.load(element, new HashSet<Object>()).toString());
+		loadFile("classpath:/numberGenerator_fullLoad.xml");
 	}
 }
