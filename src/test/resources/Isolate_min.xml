@@ -5,5 +5,6 @@
 							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
 	<rg:isolate id="isolate-1">
 		<rgcct:test-step id="test-step-1"/>
+		<rgcct:test-step id="test-step-2"/>
 	</rg:isolate>
 </rg:regurgitator-configuration>
