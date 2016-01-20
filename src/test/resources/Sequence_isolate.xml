@@ -3,7 +3,9 @@
 							   xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
 							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
-	<rg:isolate id="isolate-1" include-parameters="true">
+	<rg:sequence id="sequence-1" isolate="true">
 		<rgcct:test-step id="test-step-1"/>
-	</rg:isolate>
+		<rgcct:test-step id="test-step-2"/>
+		<rgcct:test-step id="test-step-3"/>
+	</rg:sequence>
 </rg:regurgitator-configuration>
