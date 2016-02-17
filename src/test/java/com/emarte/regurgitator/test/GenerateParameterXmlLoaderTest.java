@@ -3,6 +3,8 @@ package com.emarte.regurgitator.test;
 import com.emarte.regurgitator.core.*;
 import org.junit.Test;
 
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+
 public class GenerateParameterXmlLoaderTest extends XmlLoaderTest {
 	public GenerateParameterXmlLoaderTest() {
 		super(new GenerateParameterXmlLoader());
@@ -35,7 +37,7 @@ public class GenerateParameterXmlLoaderTest extends XmlLoaderTest {
 
 	@Test
 	public void testFullLoadXml() throws Exception {
-		ConfigurationFile.loadFile("classpath:/GenerateParameter_max.xml");
+		loadFile("classpath:/GenerateParameter_max.xml");
 	}
 
 	@Test(expected = RegurgitatorException.class)

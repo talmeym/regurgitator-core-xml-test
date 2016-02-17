@@ -3,6 +3,8 @@ package com.emarte.regurgitator.test;
 import com.emarte.regurgitator.core.*;
 import org.junit.Test;
 
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+
 public class DecisionXmlLoaderTest extends XmlLoaderTest {
 	public DecisionXmlLoaderTest() {
 		super(new DecisionXmlLoader());
@@ -30,7 +32,7 @@ public class DecisionXmlLoaderTest extends XmlLoaderTest {
 
 	@Test
 	public void testFullLoadXml() throws Exception {
-		ConfigurationFile.loadFile("classpath:/Decision_max.xml");
+		loadFile("classpath:/Decision_max.xml");
 	}
 
 	@Test(expected = RegurgitatorException.class)

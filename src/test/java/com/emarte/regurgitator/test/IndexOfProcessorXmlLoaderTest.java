@@ -1,7 +1,9 @@
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.IndexOfProcessorXmlLoader;
+import com.emarte.regurgitator.core.*;
 import org.junit.Test;
+
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
 
 public class IndexOfProcessorXmlLoaderTest extends XmlLoaderTest {
 	public IndexOfProcessorXmlLoaderTest() {
@@ -21,5 +23,10 @@ public class IndexOfProcessorXmlLoaderTest extends XmlLoaderTest {
 	@Test
 	public void testSourceAndValue() throws Exception {
 		assertExpectation("classpath:/IndexOfProcessor_sourceAndValue.xml", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value'],false]");
+	}
+
+	@Test
+	public void testFullLoad() throws RegurgitatorException {
+		loadFile("classpath:/IndexOfProcessor_fullLoad.xml");
 	}
 }
