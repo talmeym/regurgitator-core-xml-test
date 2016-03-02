@@ -5,9 +5,9 @@ import org.dom4j.Element;
 
 import java.util.Set;
 
-public class TestConditionBehaviourXmlLoader implements XmlLoader<ConditionBehaviour> {
+public class TestConditionBehaviourXmlLoader implements XmlLoader<TestConditionBehaviour> {
 	@Override
-	public ConditionBehaviour load(Element element, Set<Object> allIds) throws RegurgitatorException {
+	public TestConditionBehaviour load(Element element, Set<Object> allIds) throws RegurgitatorException {
 		return new TestConditionBehaviour();
 	}
 }

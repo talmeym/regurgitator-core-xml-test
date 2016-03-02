@@ -5,9 +5,9 @@ import org.dom4j.Element;
 
 import java.util.Set;
 
-public class TestRulesBehaviourXmlLoader implements XmlLoader<RulesBehaviour> {
+public class TestRulesBehaviourXmlLoader implements XmlLoader<TestRulesBehaviour> {
 	@Override
-	public RulesBehaviour load(Element element, Set<Object> allIds) throws RegurgitatorException {
+	public TestRulesBehaviour load(Element element, Set<Object> allIds) throws RegurgitatorException {
 		return new TestRulesBehaviour();
 	}
 }

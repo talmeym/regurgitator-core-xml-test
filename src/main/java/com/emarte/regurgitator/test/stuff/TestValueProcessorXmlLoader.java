@@ -5,9 +5,9 @@ import org.dom4j.Element;
 
 import java.util.Set;
 
-public class TestValueProcessorXmlLoader implements XmlLoader<ValueProcessor> {
+public class TestValueProcessorXmlLoader implements XmlLoader<TestValueProcessor> {
 	@Override
-	public ValueProcessor load(Element element, Set<Object> allIds) throws RegurgitatorException {
+	public TestValueProcessor load(Element element, Set<Object> allIds) throws RegurgitatorException {
 		return new TestValueProcessor();
 	}
 }
