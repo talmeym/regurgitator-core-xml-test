@@ -9,9 +9,7 @@
 		</rg:steps>
 		<rg:rules>
 			<rg:rule id="rule-1" step="test-step-1">
-				<rg:condition id="condition-1" source="context:location">
-					<rg:contains>value</rg:contains>
-				</rg:condition>
+				<rg:condition id="condition-1" source="context:location" contains="value"/>
 			</rg:rule>
 		</rg:rules>
 	</rg:decision>

@@ -10,17 +10,13 @@
 		</rg:steps>
 		<rg:rules default-step="test-step-2" behaviour="test-rules-behaviour">
 			<rg:rule id="rule-1" step="test-step-1">
-				<rg:condition id="condition-1" source="context:location1" expectation="false">
-					<rg:equals>value1</rg:equals>
-				</rg:condition>
+				<rg:condition id="condition-1" source="context:location1" expectation="false" equals="value1"/>
 				<rg:condition id="condition-2" source="context:location2">
 					<rgcct:test-condition-behaviour>value2</rgcct:test-condition-behaviour>
 				</rg:condition>
 			</rg:rule>
 			<rg:rule id="rule-2" step="test-step-2">
-				<rg:condition id="condition-3" source="context:location3" expectation="false">
-					<rg:equals>value3</rg:equals>
-				</rg:condition>
+				<rg:condition id="condition-3" source="context:location3" expectation="false" equals="value3"/>
 				<rg:condition id="condition-4" source="context:location4">
 					<rgcct:test-condition-behaviour>value4</rgcct:test-condition-behaviour>
 				</rg:condition>
