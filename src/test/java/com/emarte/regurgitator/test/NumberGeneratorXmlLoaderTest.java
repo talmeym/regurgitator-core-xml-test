@@ -16,11 +16,16 @@ public class NumberGeneratorXmlLoaderTest extends XmlLoaderTest {
 
 	@Test
 	public void testThis() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		assertExpectation("classpath:/numberGenerator.xml", "com.emarte.regurgitator.core.NumberGenerator:[1234]");
+		assertExpectation("classpath:/NumberGenerator.xml", "com.emarte.regurgitator.core.NumberGenerator:[null]");
+	}
+
+	@Test
+	public void testMax() throws DocumentException, SAXException, IOException, RegurgitatorException {
+		assertExpectation("classpath:/NumberGenerator_max.xml", "com.emarte.regurgitator.core.NumberGenerator:[1234]");
 	}
 
 	@Test
 	public void testFullLoad() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		loadFile("classpath:/numberGenerator_fullLoad.xml");
+		loadFile("classpath:/NumberGenerator_fullLoad.xml");
 	}
 }
