@@ -1,8 +1,8 @@
 package com.emarte.regurgitator.test;
 
 import com.emarte.regurgitator.core.SequenceXmlLoader;
-import org.dom4j.DocumentException;
 import org.junit.Test;
+import org.xml.sax.SAXException;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
 
@@ -41,7 +41,7 @@ public class SequenceXmlLoaderTest extends XmlLoaderTest {
 		loadFile("classpath:/Sequence_max.xml");
 	}
 
-	@Test(expected = DocumentException.class)
+	@Test(expected = SAXException.class)
 	public void testMissingStepXml() throws Exception {
 		loadFromFile("classpath:/Sequence_missingStep.xml");
 	}

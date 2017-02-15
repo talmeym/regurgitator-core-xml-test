@@ -1,7 +1,6 @@
 package com.emarte.regurgitator.test;
 
 import com.emarte.regurgitator.core.*;
-import org.dom4j.DocumentException;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;

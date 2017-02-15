@@ -1,8 +1,8 @@
 package com.emarte.regurgitator.test;
 
 import com.emarte.regurgitator.core.*;
-import org.dom4j.DocumentException;
 import org.junit.Test;
+import org.xml.sax.SAXException;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
 
@@ -16,7 +16,7 @@ public class ExtractProcessorXmlLoaderTest extends XmlLoaderTest {
 		assertExpectation("classpath:/ExtractProcessor_min.xml", "com.emarte.regurgitator.core.ExtractProcessor:['this is {0} test',0]");
 	}
 
-	@Test(expected = DocumentException.class)
+	@Test(expected = SAXException.class)
 	public void testMissingFormatXml() throws Exception {
 		loadFromFile("classpath:/ExtractProcessor_missingFormat.xml");
 	}

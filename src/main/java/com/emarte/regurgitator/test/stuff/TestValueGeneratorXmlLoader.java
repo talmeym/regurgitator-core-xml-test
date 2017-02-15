@@ -1,7 +1,7 @@
 package com.emarte.regurgitator.test.stuff;
 
 import com.emarte.regurgitator.core.*;
-import org.dom4j.Element;
+import org.w3c.dom.Element;
 
 import java.util.Set;
 
