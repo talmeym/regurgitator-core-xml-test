@@ -6,8 +6,8 @@ import org.w3c.dom.Element;
 import java.util.Set;
 
 public class TestConditionBehaviourXmlLoader implements XmlLoader<TestConditionBehaviour> {
-	@Override
-	public TestConditionBehaviour load(Element element, Set<Object> allIds) throws RegurgitatorException {
-		return new TestConditionBehaviour();
-	}
+    @Override
+    public TestConditionBehaviour load(Element element, Set<Object> allIds) throws RegurgitatorException {
+        return new TestConditionBehaviour();
+    }
 }
