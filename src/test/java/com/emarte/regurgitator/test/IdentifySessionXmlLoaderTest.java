@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2017 Miles Talmey.
+ * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+ */
 package com.emarte.regurgitator.test;
 
 import com.emarte.regurgitator.core.*;
@@ -22,7 +26,7 @@ public class IdentifySessionXmlLoaderTest extends XmlLoaderTest {
 
     @Test
     public void testSourceAndValue() throws Exception {
-        assertExpectation("classpath:/IdentifySession_sourceAndvalue.xml", "com.emarte.regurgitator.core.IdentifySession:['identify-session-1',com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value']]");
+        assertExpectation("classpath:/IdentifySession_sourceAndValue.xml", "com.emarte.regurgitator.core.IdentifySession:['identify-session-1',com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value']]");
     }
 
     @Test
