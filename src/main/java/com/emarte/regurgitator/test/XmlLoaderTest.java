@@ -19,7 +19,11 @@ public class XmlLoaderTest {
         this.toTest = toTest;
     }
 
-    public Element getElement(String filePath) throws SAXException, ParserConfigurationException, IOException, RegurgitatorException {
+    protected String loadFromFile(String filePath) throws RegurgitatorException, SAXException, IOException, ParserConfigurationException {
+        return toTest.load(getElement(filePath), new HashSet<Object>()).toString();
+    }
+
+    private Element getElement(String filePath) throws SAXException, ParserConfigurationException, IOException, RegurgitatorException {
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         dbFactory.setValidating(true);
         dbFactory.setNamespaceAware(true);
@@ -55,13 +59,7 @@ public class XmlLoaderTest {
         Element rootElement = doc.getDocumentElement();
         rootElement.normalize();
         return getFirstChild(rootElement);
-    }
-
-    protected String loadFromFile(String filePath) throws RegurgitatorException, SAXException, IOException, ParserConfigurationException {
-        return toTest.load(getElement(filePath), new HashSet<Object>()).toString();
-    }
-
-    protected final void assertExpectation(String filePath, String expected) throws RegurgitatorException, SAXException, IOException, ParserConfigurationException {
+    }    protected final void assertExpectation(String filePath, String expected) throws RegurgitatorException, SAXException, IOException, ParserConfigurationException {
         assertEquals(expected, loadFromFile(filePath));
     }
 
