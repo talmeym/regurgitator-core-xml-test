@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
-							   xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
-							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
-	<rg:generate-parameter id="generate-parameter-1" name="context:name" merge="LEAVE" type="NUMBER" processor="test-value-processor">
-		<rgcct:test-value-generator/>
-	</rg:generate-parameter>
+                               xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
+                               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                               xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
+    <rg:generate-parameter id="generate-parameter-1" name="context:name" merge="LEAVE" type="NUMBER" processor="test-value-processor">
+        <rgcct:test-value-generator/>
+    </rg:generate-parameter>
 </rg:regurgitator-configuration>

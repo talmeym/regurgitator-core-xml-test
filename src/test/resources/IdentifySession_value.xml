@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
-							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd">
-	<rg:identify-session id="identify-session-1" value="value"/>
+                               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                               xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd">
+    <rg:identify-session id="identify-session-1" value="value"/>
 </rg:regurgitator-configuration>

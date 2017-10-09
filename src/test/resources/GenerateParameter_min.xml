@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
-							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd">
-	<rg:generate-parameter id="generate-parameter-1" name="name" generator="UUID"/>
+                               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                               xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd">
+    <rg:generate-parameter id="generate-parameter-1" name="name" generator="UUID"/>
 </rg:regurgitator-configuration>

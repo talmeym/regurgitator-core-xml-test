@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
-							   xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
-							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
-	<rg:decision id="decision-1">
-		<rg:steps>
-			<rgcct:test-step id="test-step-1"/>
-			<rgcct:test-step id="test-step-2"/>
-		</rg:steps>
-		<rg:rules default-step="test-step-2">
-			<rg:behaviour>
-				<rgcct:test-rules-behaviour/>
-			</rg:behaviour>
-			<rg:rule id="rule-1" step="test-step-1">
-				<rg:condition id="condition-1" source="context:location1" expectation="false" equals="value1"/>
-				<rg:condition id="condition-2" source="context:location2">
-					<rgcct:test-condition-behaviour>value2</rgcct:test-condition-behaviour>
-				</rg:condition>
-			</rg:rule>
-			<rg:rule id="rule-2" step="test-step-2">
-				<rg:condition id="condition-3" source="context:location3" expectation="false" equals="value3"/>
-				<rg:condition id="condition-4" source="context:location4">
-					<rgcct:test-condition-behaviour>value4</rgcct:test-condition-behaviour>
-				</rg:condition>
-			</rg:rule>
-		</rg:rules>
-	</rg:decision>
+                               xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
+                               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                               xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
+    <rg:decision id="decision-1">
+        <rg:steps>
+            <rgcct:test-step id="test-step-1"/>
+            <rgcct:test-step id="test-step-2"/>
+        </rg:steps>
+        <rg:rules default-step="test-step-2">
+            <rg:behaviour>
+                <rgcct:test-rules-behaviour/>
+            </rg:behaviour>
+            <rg:rule id="rule-1" step="test-step-1">
+                <rg:condition id="condition-1" source="context:location1" expectation="false" equals="value1"/>
+                <rg:condition id="condition-2" source="context:location2">
+                    <rgcct:test-condition-behaviour>value2</rgcct:test-condition-behaviour>
+                </rg:condition>
+            </rg:rule>
+            <rg:rule id="rule-2" step="test-step-2">
+                <rg:condition id="condition-3" source="context:location3" expectation="false" equals="value3"/>
+                <rg:condition id="condition-4" source="context:location4">
+                    <rgcct:test-condition-behaviour>value4</rgcct:test-condition-behaviour>
+                </rg:condition>
+            </rg:rule>
+        </rg:rules>
+    </rg:decision>
 </rg:regurgitator-configuration>

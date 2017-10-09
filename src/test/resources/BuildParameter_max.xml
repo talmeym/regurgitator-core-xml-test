@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
-							   xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
-							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
-	<rg:build-parameter id="build-param-2" name="something:toTest2" type="NUMBER" merge="LEAVE">
-		<rgcct:test-value-builder/>
-		<rgcct:test-value-processor/>
-	</rg:build-parameter>
+                               xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
+                               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                               xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
+    <rg:build-parameter id="build-param-2" name="something:toTest2" type="NUMBER" merge="LEAVE">
+        <rgcct:test-value-builder/>
+        <rgcct:test-value-processor/>
+    </rg:build-parameter>
 </rg:regurgitator-configuration>
