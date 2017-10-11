@@ -4,7 +4,8 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.*;
+import com.emarte.regurgitator.core.ExtractProcessorXmlLoader;
+import com.emarte.regurgitator.core.RegurgitatorException;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 

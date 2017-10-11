@@ -5,11 +5,12 @@
 package com.emarte.regurgitator.test;
 
 import com.emarte.regurgitator.core.*;
-import org.w3c.dom.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.xml.sax.*;
 
 import javax.xml.parsers.*;
-import java.io.*;
+import java.io.IOException;
 import java.util.HashSet;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
