@@ -2,5 +2,5 @@
 <rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                                xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd">
-    <rg:generate-parameter id="generate-parameter-1" name="name" generator="UUID"/>
+    <rg:generate-parameter id="generate-parameter-1" name="name" generator="test-value-generator"/>
 </rg:regurgitator-configuration>
