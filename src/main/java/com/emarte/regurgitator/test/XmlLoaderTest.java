@@ -14,11 +14,12 @@ import java.io.IOException;
 import java.util.HashSet;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 import static com.emarte.regurgitator.core.XmlConfigUtil.getFirstChild;
 import static org.junit.Assert.assertEquals;
 
 public class XmlLoaderTest {
-    protected final XmlLoader toTest;
+    private final XmlLoader toTest;
 
     public XmlLoaderTest(XmlLoader toTest) {
         this.toTest = toTest;
@@ -38,8 +39,7 @@ public class XmlLoaderTest {
         dBuilder.setEntityResolver(new EntityResolver() {
             public InputSource resolveEntity(String publicId, String systemId) throws IOException {
                 String resolvePath = "classpath:/" + systemId.substring(systemId.lastIndexOf("/") + 1);
-                FileUtil.checkResource(resolvePath);
-                return new InputSource(FileUtil.getInputStreamForFile(resolvePath));
+                return new InputSource(getInputStreamForFile(resolvePath));
             }
         });
 
@@ -60,7 +60,7 @@ public class XmlLoaderTest {
             }
         });
 
-        Document doc = dBuilder.parse(FileUtil.getInputStreamForFile(filePath));
+        Document doc = dBuilder.parse(getInputStreamForFile(filePath));
         Element rootElement = doc.getDocumentElement();
         rootElement.normalize();
         return getFirstChild(rootElement);
