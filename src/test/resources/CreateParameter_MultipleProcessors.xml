@@ -5,5 +5,6 @@
                                xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
     <rg:create-parameter id="create-param-1" name="toTest1" source="context:location">
         <rgcct:test-value-processor/>
+        <rgcct:test-value-processor/>
     </rg:create-parameter>
 </rg:regurgitator-configuration>

@@ -42,6 +42,11 @@ public class GenerateParameterXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
+    public void testMaximumMultipleProcessors() throws Exception {
+        assertExpectation("classpath:/GenerateParameter_maxMultipleProcessors.xml", GenerateParameter_maxMultipleProcessors);
+    }
+
+    @Test
     public void testFullLoad() throws Exception {
         loadFile("classpath:/GenerateParameter_max.xml");
     }

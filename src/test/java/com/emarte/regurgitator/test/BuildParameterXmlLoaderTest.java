@@ -47,6 +47,11 @@ public class BuildParameterXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
+    public void testMaximumHMultipleProcessors() throws Exception {
+        assertExpectation("classpath:/BuildParameter_maxMultipleProcessors.xml", BuildParameter_maxMultipleProcessors);
+    }
+
+    @Test
     public void testFullLoad() throws Exception {
         loadFile("classpath:/BuildParameter_max.xml");
     }
