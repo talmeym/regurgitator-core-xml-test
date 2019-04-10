@@ -7,18 +7,21 @@ package com.emarte.regurgitator.test;
 import com.emarte.regurgitator.core.RecordMessageXmlLoader;
 import org.junit.Test;
 
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.RecordMessage_folder;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.RecordMessage_min;
+
 public class RecordMessageXmlLoaderTest extends XmlLoaderTest {
     public RecordMessageXmlLoaderTest() {
         super(new RecordMessageXmlLoader());
     }
 
     @Test
-    public void testMin() throws Exception {
-        assertExpectation("classpath:/RecordMessage_min.xml", "com.emarte.regurgitator.core.RecordMessage:['record-message-1',null]");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/RecordMessage_min.xml", RecordMessage_min);
     }
 
     @Test
     public void testFolder() throws Exception {
-        assertExpectation("classpath:/RecordMessage_folder.xml", "com.emarte.regurgitator.core.RecordMessage:['record-message-1','/folder/folder']");
+        assertExpectation("classpath:/RecordMessage_folder.xml", RecordMessage_folder);
     }
 }

@@ -8,6 +8,8 @@ import com.emarte.regurgitator.core.NumberGeneratorXmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.NumberGenerator;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.NumberGenerator_max;
 
 public class NumberGeneratorXmlLoaderTest extends XmlLoaderTest {
     public NumberGeneratorXmlLoaderTest() {
@@ -16,12 +18,12 @@ public class NumberGeneratorXmlLoaderTest extends XmlLoaderTest {
 
     @Test
     public void testThis() throws Exception {
-        assertExpectation("classpath:/NumberGenerator.xml", "com.emarte.regurgitator.core.NumberGenerator:[null]");
+        assertExpectation("classpath:/NumberGenerator.xml", NumberGenerator);
     }
 
     @Test
-    public void testMax() throws Exception {
-        assertExpectation("classpath:/NumberGenerator_max.xml", "com.emarte.regurgitator.core.NumberGenerator:[1234]");
+    public void testMaximum() throws Exception {
+        assertExpectation("classpath:/NumberGenerator_max.xml", NumberGenerator_max);
     }
 
     @Test

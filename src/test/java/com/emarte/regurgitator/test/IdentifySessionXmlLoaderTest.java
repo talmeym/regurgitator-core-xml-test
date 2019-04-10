@@ -9,6 +9,7 @@ import com.emarte.regurgitator.core.RegurgitatorException;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 
 public class IdentifySessionXmlLoaderTest extends XmlLoaderTest {
     public IdentifySessionXmlLoaderTest() {
@@ -16,22 +17,22 @@ public class IdentifySessionXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testSource() throws Exception {
-        assertExpectation("classpath:/IdentifySession_source.xml", "com.emarte.regurgitator.core.IdentifySession:['identify-session-1',com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null]]");
+    public void testValue() throws Exception {
+        assertExpectation("classpath:/IdentifySession_value.xml", IdentifySession_value);
     }
 
     @Test
-    public void testValue() throws Exception {
-        assertExpectation("classpath:/IdentifySession_value.xml", "com.emarte.regurgitator.core.IdentifySession:['identify-session-1',com.emarte.regurgitator.core.ValueSource:[null,'value']]");
+    public void testSource() throws Exception {
+        assertExpectation("classpath:/IdentifySession_source.xml", IdentifySession_source);
     }
 
     @Test
     public void testSourceAndValue() throws Exception {
-        assertExpectation("classpath:/IdentifySession_sourceAndValue.xml", "com.emarte.regurgitator.core.IdentifySession:['identify-session-1',com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value']]");
+        assertExpectation("classpath:/IdentifySession_sourceAndValue.xml", IdentifySession_sourceAndValue);
     }
 
     @Test
-    public void testFullLoadXml() throws Exception {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/IdentifySession_source.xml");
     }
 

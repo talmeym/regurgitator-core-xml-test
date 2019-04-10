@@ -8,6 +8,7 @@ import com.emarte.regurgitator.core.UuidGeneratorXmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.UuidGenerator;
 
 public class UuidGeneratorXmlLoaderTest extends XmlLoaderTest {
     public UuidGeneratorXmlLoaderTest() {
@@ -16,7 +17,7 @@ public class UuidGeneratorXmlLoaderTest extends XmlLoaderTest {
 
     @Test
     public void testThis() throws Exception {
-        assertExpectation("classpath:/UuidGenerator.xml", "com.emarte.regurgitator.core.UuidGenerator:[]");
+        assertExpectation("classpath:/UuidGenerator.xml", UuidGenerator);
     }
 
     @Test

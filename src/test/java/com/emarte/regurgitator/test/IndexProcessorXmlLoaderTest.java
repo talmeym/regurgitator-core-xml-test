@@ -5,10 +5,10 @@
 package com.emarte.regurgitator.test;
 
 import com.emarte.regurgitator.core.IndexProcessorXmlLoader;
-import com.emarte.regurgitator.core.RegurgitatorException;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 
 public class IndexProcessorXmlLoaderTest extends XmlLoaderTest {
     public IndexProcessorXmlLoaderTest() {
@@ -16,22 +16,25 @@ public class IndexProcessorXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testSource() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_source.xml", "com.emarte.regurgitator.core.IndexProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null]]");
+    public void testValue() throws Exception {
+        // reuse IndexOfProcessor files
+        assertExpectation("classpath:/IndexOfProcessor_value.xml", IndexProcessor_value);
     }
 
     @Test
-    public void testValue() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_value.xml", "com.emarte.regurgitator.core.IndexProcessor:[com.emarte.regurgitator.core.ValueSource:[null,'value']]");
+    public void testSource() throws Exception {
+        // reuse IndexOfProcessor files
+        assertExpectation("classpath:/IndexOfProcessor_source.xml", IndexProcessor_source);
     }
 
     @Test
     public void testSourceAndValue() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_sourceAndValue.xml", "com.emarte.regurgitator.core.IndexProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value']]");
+        // reuse IndexOfProcessor files
+        assertExpectation("classpath:/IndexOfProcessor_sourceAndValue.xml", IndexProcessor_sourceAndValue);
     }
 
     @Test
-    public void testFullLoad() throws RegurgitatorException {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/IndexProcessor_fullLoad.xml");
     }
 }

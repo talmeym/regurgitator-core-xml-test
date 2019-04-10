@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.xml.sax.SAXException;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 
 public class SequenceXmlLoaderTest extends XmlLoaderTest {
     public SequenceXmlLoaderTest() {
@@ -16,28 +17,28 @@ public class SequenceXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testMinimumXml() throws Exception {
-        assertExpectation("classpath:/Sequence_min.xml", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1']],null]");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/Sequence_min.xml", Sequence_min);
     }
 
     @Test
-    public void testMaximumXml() throws Exception {
-        assertExpectation("classpath:/Sequence_max.xml", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-3']],com.emarte.regurgitator.core.Isolate:[true,true]]");
+    public void testMaximum() throws Exception {
+        assertExpectation("classpath:/Sequence_max.xml", Sequence_max);
     }
 
     @Test
-    public void testIsolateXml() throws Exception {
-        assertExpectation("classpath:/Sequence_isolate.xml", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-3']],com.emarte.regurgitator.core.Isolate:[false,false]]");
+    public void testIsolate() throws Exception {
+        assertExpectation("classpath:/Sequence_isolate.xml", Sequence_isolate);
     }
 
     @Test
-    public void testIsolateWithParamsXml() throws Exception {
-        assertExpectation("classpath:/Sequence_isolateParams.xml", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-3']],com.emarte.regurgitator.core.Isolate:[false,true]]");
+    public void testIsolateWithParams() throws Exception {
+        assertExpectation("classpath:/Sequence_isolateParams.xml", Sequence_isolateParams);
     }
 
     @Test
-    public void testIsolateWithSessionXml() throws Exception {
-        assertExpectation("classpath:/Sequence_isolateSession.xml", "com.emarte.regurgitator.core.Sequence:['sequence-1',[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-3']],com.emarte.regurgitator.core.Isolate:[true,false]]");
+    public void testIsolateWithSession() throws Exception {
+        assertExpectation("classpath:/Sequence_isolateSession.xml", Sequence_isolateSession);
     }
 
     @Test
@@ -46,7 +47,7 @@ public class SequenceXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test(expected = SAXException.class)
-    public void testMissingStepXml() throws Exception {
+    public void testMissingStep() throws Exception {
         loadFromFile("classpath:/Sequence_missingStep.xml");
     }
 }

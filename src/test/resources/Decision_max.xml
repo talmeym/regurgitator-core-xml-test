@@ -20,6 +20,9 @@
                 <rg:condition id="condition-4" source="context:location4">
                     <rgcct:test-condition-behaviour>value4</rgcct:test-condition-behaviour>
                 </rg:condition>
+                <rg:condition id="condition-5" source="context:location5">
+                    <rgcct:test-condition-behaviour>value5</rgcct:test-condition-behaviour>
+                </rg:condition>
             </rg:rule>
         </rg:rules>
     </rg:decision>

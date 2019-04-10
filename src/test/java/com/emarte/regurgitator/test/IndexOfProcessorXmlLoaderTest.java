@@ -5,10 +5,10 @@
 package com.emarte.regurgitator.test;
 
 import com.emarte.regurgitator.core.IndexOfProcessorXmlLoader;
-import com.emarte.regurgitator.core.RegurgitatorException;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 
 public class IndexOfProcessorXmlLoaderTest extends XmlLoaderTest {
     public IndexOfProcessorXmlLoaderTest() {
@@ -16,22 +16,22 @@ public class IndexOfProcessorXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testSource() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_source.xml", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null],false]");
+    public void testValue() throws Exception {
+        assertExpectation("classpath:/IndexOfProcessor_value.xml", IndexOfProcessor_value);
     }
 
     @Test
-    public void testValue() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_value.xml", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[null,'value'],false]");
+    public void testSource() throws Exception {
+        assertExpectation("classpath:/IndexOfProcessor_source.xml", IndexOfProcessor_source);
     }
 
     @Test
     public void testSourceAndValue() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_sourceAndValue.xml", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value'],false]");
+        assertExpectation("classpath:/IndexOfProcessor_sourceAndValue.xml", IndexOfProcessor_sourceAndValue);
     }
 
     @Test
-    public void testFullLoad() throws RegurgitatorException {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/IndexOfProcessor_fullLoad.xml");
     }
 }

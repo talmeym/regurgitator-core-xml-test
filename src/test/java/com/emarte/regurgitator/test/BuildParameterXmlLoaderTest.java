@@ -9,6 +9,7 @@ import com.emarte.regurgitator.core.RegurgitatorException;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 
 public class BuildParameterXmlLoaderTest extends XmlLoaderTest {
     public BuildParameterXmlLoaderTest() {
@@ -16,37 +17,37 @@ public class BuildParameterXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testMinimumXml() throws Exception {
-        assertExpectation("classpath:/BuildParameter_min.xml", "com.emarte.regurgitator.core.BuildParameter:['build-param-1',com.emarte.regurgitator.core.ParameterPrototype:['toTest1',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],null]");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/BuildParameter_min.xml", BuildParameter_min);
     }
 
     @Test
-    public void testMinimumFlatXml() throws Exception {
-        assertExpectation("classpath:/BuildParameter_minFlat.xml", "com.emarte.regurgitator.core.BuildParameter:['build-param-1',com.emarte.regurgitator.core.ParameterPrototype:['toTest1',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],null]");
+    public void testMinimumFlat() throws Exception {
+        assertExpectation("classpath:/BuildParameter_minFlat.xml", BuildParameter_minFlat);
     }
 
     @Test
-    public void testMaximumXml() throws Exception {
-        assertExpectation("classpath:/BuildParameter_max.xml", "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+    public void testMaximum() throws Exception {
+        assertExpectation("classpath:/BuildParameter_max.xml", BuildParameter_max);
     }
 
     @Test
-    public void testMaximumFlatXml() throws Exception {
-        assertExpectation("classpath:/BuildParameter_max_flat.xml", "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+    public void testMaximumFlat() throws Exception {
+        assertExpectation("classpath:/BuildParameter_maxFlat.xml", BuildParameter_maxFlat);
     }
 
     @Test
-    public void testMaximumHalfFlatBuilderXml() throws Exception {
-        assertExpectation("classpath:/BuildParameter_maxHalfFlatBuilder.xml", "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+    public void testMaximumHalfFlatBuilder() throws Exception {
+        assertExpectation("classpath:/BuildParameter_maxHalfFlatBuilder.xml", BuildParameter_maxHalfFlatBuilder);
     }
 
     @Test
-    public void testMaximumHalfFlatProcessorXml() throws Exception {
-        assertExpectation("classpath:/BuildParameter_maxHalfFlatProcessor.xml", "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+    public void testMaximumHalfFlatProcessor() throws Exception {
+        assertExpectation("classpath:/BuildParameter_maxHalfFlatProcessor.xml", BuildParameter_maxHalfFlatProcessor);
     }
 
     @Test
-    public void testFullLoadXml() throws Exception {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/BuildParameter_max.xml");
     }
 

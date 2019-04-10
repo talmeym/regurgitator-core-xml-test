@@ -4,12 +4,15 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.*;
+import com.emarte.regurgitator.core.RegurgitatorException;
+import com.emarte.regurgitator.core.XmlLoader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.*;
 
-import javax.xml.parsers.*;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.HashSet;
 
