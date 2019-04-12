@@ -47,8 +47,13 @@ public class BuildParameterXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testMaximumHMultipleProcessors() throws Exception {
-        assertExpectation("classpath:/BuildParameter_maxMultipleProcessors.xml", BuildParameter_maxMultipleProcessors);
+    public void testMultipleProcessors() throws Exception {
+        assertExpectation("classpath:/BuildParameter_multipleProcessors.xml", BuildParameter_multipleProcessors);
+    }
+
+    @Test
+    public void testMultipleProcessorsFlat() throws Exception {
+        assertExpectation("classpath:/BuildParameter_multipleProcessorsFlat.xml", BuildParameter_multipleProcessorsFlat);
     }
 
     @Test
@@ -69,5 +74,15 @@ public class BuildParameterXmlLoaderTest extends XmlLoaderTest {
     @Test(expected = RegurgitatorException.class)
     public void testInvalidXmlMissingProcessorClass() throws Exception {
         loadFromFile("classpath:/BuildParameter_missingProcessorClass.xml");
+    }
+
+    @Test(expected = RegurgitatorException.class)
+    public void testInvalidJsonBothProcessorAndProcessorsPresent() throws Exception {
+        loadFromFile("classpath:/BuildParameter_processorAndProcessors.xml");
+    }
+
+    @Test(expected = RegurgitatorException.class)
+    public void testInvalidJsonProcessorAndChildElementPresent() throws Exception {
+        loadFromFile("classpath:/BuildParameter_processorAndChildElement.xml");
     }
 }
