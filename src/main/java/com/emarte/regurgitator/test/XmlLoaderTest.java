@@ -67,7 +67,9 @@ public class XmlLoaderTest {
         Element rootElement = doc.getDocumentElement();
         rootElement.normalize();
         return getFirstChild(rootElement);
-    }    protected final void assertExpectation(String filePath, String expected) throws RegurgitatorException, SAXException, IOException, ParserConfigurationException {
+    }
+
+    protected final void assertExpectation(String filePath, String expected) throws RegurgitatorException, SAXException, IOException, ParserConfigurationException {
         assertEquals(expected, loadFromFile(filePath));
     }
 

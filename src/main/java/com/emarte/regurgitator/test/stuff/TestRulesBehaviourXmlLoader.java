@@ -4,7 +4,6 @@
  */
 package com.emarte.regurgitator.test.stuff;
 
-import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.core.XmlLoader;
 import org.w3c.dom.Element;
 
@@ -12,7 +11,7 @@ import java.util.Set;
 
 public class TestRulesBehaviourXmlLoader implements XmlLoader<TestRulesBehaviour> {
     @Override
-    public TestRulesBehaviour load(Element element, Set<Object> allIds) throws RegurgitatorException {
+    public TestRulesBehaviour load(Element element, Set<Object> allIds) {
         return new TestRulesBehaviour();
     }
 }
