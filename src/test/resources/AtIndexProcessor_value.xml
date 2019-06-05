@@ -2,7 +2,5 @@
 <rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                                xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd">
-    <rg:create-parameter name="name" value="this">
-        <rg:index-processor source="that"/>
-    </rg:create-parameter>
+    <rg:at-index-processor value="value"/>
 </rg:regurgitator-configuration>
