@@ -48,7 +48,7 @@ public class XmlLoaderTest {
 
         dBuilder.setErrorHandler(new ErrorHandler() {
             @Override
-            public void warning(SAXParseException exception) throws SAXException {
+            public void warning(SAXParseException exception) {
 
             }
 
@@ -59,7 +59,7 @@ public class XmlLoaderTest {
 
             @Override
             public void fatalError(SAXParseException exception) throws SAXException {
-                throw new SAXException("Error: ", exception);
+                throw new SAXException("Fatal Error: ", exception);
             }
         });
 
