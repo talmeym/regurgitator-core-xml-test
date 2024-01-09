@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
+<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.uk"
                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                               xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
-                               xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
+                               xmlns:rgcct="http://stuff.test.regurgitator.emarte.uk"
+                               xsi:schemaLocation="http://core.regurgitator.emarte.uk regurgitatorCore.xsd http://stuff.test.regurgitator.emarte.uk test.xsd">
     <rg:create-parameter id="create-param-1" name="toTest1" source="context:location">
         <rgcct:test-value-processor/>
         <rgcct:test-value-processor/>
