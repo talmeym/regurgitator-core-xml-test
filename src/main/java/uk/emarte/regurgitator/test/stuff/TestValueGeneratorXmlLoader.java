@@ -4,9 +4,9 @@
  */
 package uk.emarte.regurgitator.test.stuff;
 
+import org.w3c.dom.Element;
 import uk.emarte.regurgitator.core.ValueGenerator;
 import uk.emarte.regurgitator.core.XmlLoader;
-import org.w3c.dom.Element;
 
 import java.util.Set;
 

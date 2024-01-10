@@ -4,10 +4,11 @@
  */
 package uk.emarte.regurgitator.test;
 
-import uk.emarte.regurgitator.core.RecordMessageXmlLoader;
 import org.junit.Test;
+import uk.emarte.regurgitator.core.RecordMessageXmlLoader;
 
-import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
+import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.RecordMessage_folder;
+import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.RecordMessage_min;
 
 public class RecordMessageXmlLoaderTest extends XmlLoaderTest {
     public RecordMessageXmlLoaderTest() {

@@ -4,9 +4,9 @@
  */
 package uk.emarte.regurgitator.test;
 
-import uk.emarte.regurgitator.core.ExtractProcessorXmlLoader;
 import org.junit.Test;
 import org.xml.sax.SAXException;
+import uk.emarte.regurgitator.core.ExtractProcessorXmlLoader;
 
 import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
 import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.ExtractProcessor_min;

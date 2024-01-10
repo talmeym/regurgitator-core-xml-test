@@ -4,10 +4,10 @@
  */
 package uk.emarte.regurgitator.test.stuff;
 
+import org.w3c.dom.Element;
 import uk.emarte.regurgitator.core.RegurgitatorException;
 import uk.emarte.regurgitator.core.Step;
 import uk.emarte.regurgitator.core.XmlLoader;
-import org.w3c.dom.Element;
 
 import java.util.Set;
 

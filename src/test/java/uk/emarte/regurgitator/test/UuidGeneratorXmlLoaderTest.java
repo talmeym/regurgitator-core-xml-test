@@ -4,8 +4,8 @@
  */
 package uk.emarte.regurgitator.test;
 
-import uk.emarte.regurgitator.core.UuidGeneratorXmlLoader;
 import org.junit.Test;
+import uk.emarte.regurgitator.core.UuidGeneratorXmlLoader;
 
 import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
 import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.UuidGenerator;

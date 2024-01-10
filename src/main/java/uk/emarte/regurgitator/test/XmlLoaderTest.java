@@ -4,11 +4,11 @@
  */
 package uk.emarte.regurgitator.test;
 
-import uk.emarte.regurgitator.core.RegurgitatorException;
-import uk.emarte.regurgitator.core.XmlLoader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.*;
+import uk.emarte.regurgitator.core.RegurgitatorException;
+import uk.emarte.regurgitator.core.XmlLoader;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -16,10 +16,10 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.HashSet;
 
+import static org.junit.Assert.assertEquals;
 import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
 import static uk.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 import static uk.emarte.regurgitator.core.XmlConfigUtil.getFirstChild;
-import static org.junit.Assert.assertEquals;
 
 public class XmlLoaderTest {
     private final XmlLoader toTest;
