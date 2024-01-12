@@ -22,14 +22,14 @@ import static uk.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 import static uk.emarte.regurgitator.core.XmlConfigUtil.getFirstChild;
 
 public class XmlLoaderTest {
-    private final XmlLoader toTest;
+    private final XmlLoader<?> toTest;
 
-    public XmlLoaderTest(XmlLoader toTest) {
+    public XmlLoaderTest(XmlLoader<?> toTest) {
         this.toTest = toTest;
     }
 
     protected String loadFromFile(String filePath) throws RegurgitatorException, SAXException, IOException, ParserConfigurationException {
-        return toTest.load(getElement(filePath), new HashSet<Object>()).toString();
+        return toTest.load(getElement(filePath), new HashSet<>()).toString();
     }
 
     private Element getElement(String filePath) throws SAXException, ParserConfigurationException, IOException, RegurgitatorException {
@@ -39,11 +39,9 @@ public class XmlLoaderTest {
         dbFactory.setAttribute("http://java.sun.com/xml/jaxp/properties/schemaLanguage", "http://www.w3.org/2001/XMLSchema");
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 
-        dBuilder.setEntityResolver(new EntityResolver() {
-            public InputSource resolveEntity(String publicId, String systemId) throws IOException {
-                String resolvePath = "classpath:/" + systemId.substring(systemId.lastIndexOf("/") + 1);
-                return new InputSource(getInputStreamForFile(resolvePath));
-            }
+        dBuilder.setEntityResolver((publicId, systemId) -> {
+            String resolvePath = "classpath:/" + systemId.substring(systemId.lastIndexOf("/") + 1);
+            return new InputSource(getInputStreamForFile(resolvePath));
         });
 
         dBuilder.setErrorHandler(new ErrorHandler() {
