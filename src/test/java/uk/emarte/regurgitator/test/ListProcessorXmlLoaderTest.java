@@ -17,7 +17,7 @@ public class ListProcessorXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testThis() throws Exception {
+    public void testLoader() throws Exception {
         assertExpectation("classpath:/ListProcessor.xml", ListProcessor);
     }
 
